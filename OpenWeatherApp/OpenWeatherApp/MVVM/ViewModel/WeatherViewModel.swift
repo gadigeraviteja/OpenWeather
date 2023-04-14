@@ -16,11 +16,9 @@ class WeatherViewModel {
         
         let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(cityname)&appid=\(apiKey)&units=metric")!
         
-        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
-                print("error in url session")
                 print(error)
                 return
             }

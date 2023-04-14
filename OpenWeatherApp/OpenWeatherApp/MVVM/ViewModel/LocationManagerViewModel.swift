@@ -20,7 +20,6 @@ class LocationManagerViewModel: NSObject {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
-    
     func retriveLocationDetails()
     {
         locationManager.requestLocation()
@@ -35,11 +34,7 @@ class LocationManagerViewModel: NSObject {
             locationManager.requestWhenInUseAuthorization()
             return
         }
-        
     }
-    
-    
-    
 }
 
 extension LocationManagerViewModel : CLLocationManagerDelegate {
